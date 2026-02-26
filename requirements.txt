@@ -1,0 +1,32 @@
+# Core dependencies
+torch>=2.0.0
+torchaudio>=2.0.0
+librosa>=0.10.0
+numpy>=1.24.0
+pandas>=2.0.0
+soundfile>=0.12.0
+tqdm>=4.65.0
+pyyaml>=6.0
+omegaconf>=2.3.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+tensorboard>=2.13.0
+
+# Audio processing and evaluation
+pesq>=0.0.4
+pystoi>=0.3.3
+scipy>=1.11.0
+
+# Development and testing
+pytest>=7.4.0
+black>=23.0.0
+ruff>=0.0.280
+pre-commit>=3.3.0
+
+# Demo and visualization
+streamlit>=1.25.0
+gradio>=3.40.0
+
+# Optional: Advanced audio processing
+# asteroid>=0.6.0  # For advanced separation models
+# essentia>=2.1b6  # For music information retrieval

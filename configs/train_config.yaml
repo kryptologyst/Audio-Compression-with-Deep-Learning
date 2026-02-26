@@ -1,0 +1,37 @@
+# Training configuration for audio compression models
+
+model:
+  type: conv1d  # Options: conv1d, vae, resnet
+  latent_dim: 128
+  channels: 64
+  beta: 1.0  # For VAE
+  num_blocks: 4  # For ResNet
+
+data:
+  data_dir: data/wav
+  sample_rate: 22050
+  target_length: 22050  # 1 second at 22050 Hz
+  normalize: true
+  num_synthetic_files: 100
+  duration: 2.0
+
+loss:
+  reconstruction_weight: 1.0
+  perceptual_weight: 0.1
+  compression_weight: 0.01
+  use_spectral_loss: true
+  spectral_weight: 0.1
+  kl_weight: 1.0  # For VAE
+
+training:
+  epochs: 100
+  batch_size: 16
+  learning_rate: 0.001
+  optimizer: adam  # Options: adam, adamw, sgd
+  grad_clip: 1.0
+  log_interval: 100
+  num_workers: 4
+  log_dir: runs
+  checkpoint_dir: checkpoints
+
+seed: 42
